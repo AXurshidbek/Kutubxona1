@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mualliflar</title>
+</head>
+<body>
+<h1>Barcha mualliflar ro'yhati</h1>
+  <br>
+  <hr>
+  {%for muallif in mualliflar %}
+  <br>
+  <h1>{{muallif.id}}. {{muallif.ism}}</h1>
+  {% endfor %}
+</body>
+</html>

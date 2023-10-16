@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Talabalar</title>
+</head>
+<body>
+<h1>Barcha talabalar ro'yhati</h1>
+  <br>
+  <hr>
+     <form method="get">
+      <input type="text" placeholder="Ismni kiriting" name="qidirish_sozi">
+      <button>Qidirish</button>
+  </form>
+  {%for talaba in talabalar %}
+  <br>
+  <h1>{{talaba.id}}. {{talaba.ism}} {{talaba.kurs}}-kurs</h1>
+    <a href="/talaba_ochir/{{talaba.id}}"><button>O'chirish</button></a>
+  {% endfor %}
+</body>
+</html>
