@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Muallif ma'lumotlarini tahrirlash</title>
+</head>
+<body>
+  <br>
+  <br>
+  <form method="post">{% csrf_token %}
+      <label>Ism:   </label>
+    <input type="text" name="ism" value="{{muallif.ism}}" disabled>
+    <br>
+      <br>
+      <label>Jinsi:  </label>
+    <select name="jinsi">
+        <option value="Erkak">Erkak</option>
+        <option value="Ayol">Ayol</option>
+    </select>
+    <br>
+      <br>
+      <label>Tug'ilgan sana:   </label>
+    <input type="number" name="kitob_soni" value="{{muallif.tugilgan_sana}}">
+      <br>
+      <br>
+    <label>Kitoblar soni:   </label>
+    <input type="number" name="kitob_soni" value="{{muallif.kitoblar_soni}}">
+      <br>
+      <br>
+    <label>Tirik:   </label>
+    <input type="checkbox" id="vehicle1" name="tirik" value="{{muallif.tirik}}">
+      <br>
+      <br>
+    <button>Saqlash</button>
+
+</form>
+</body>
+</html>

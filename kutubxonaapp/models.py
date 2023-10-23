@@ -7,7 +7,7 @@ JINS=(
 class Talaba(models.Model):
     ism=models.CharField(max_length=45)
     kurs=models.PositiveSmallIntegerField()
-    kitob_soni=models.PositiveSmallIntegerField()
+    kitob_soni=models.PositiveSmallIntegerField(default=0)
 
     def __str__(self):
         return self.ism
@@ -23,7 +23,7 @@ class Muallif(models.Model):
 
 class Kitob(models.Model):
     nom=models.CharField(max_length=101)
-    janr=models.CharField(max_length=15)
+    janr=models.CharField(max_length=15, null=True)
     sahifa=models.PositiveSmallIntegerField()
     muallif=models.ForeignKey(Muallif, on_delete=models.CASCADE)
 

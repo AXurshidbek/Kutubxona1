@@ -8,9 +8,24 @@
 <h1>Barcha mualliflar ro'yhati</h1>
   <br>
   <hr>
-  {%for muallif in mualliflar %}
-  <br>
-  <h1>{{muallif.id}}. {{muallif.ism}}</h1>
+  {% for muallif in mualliflar %}
+      <br>
+      <h1>{{muallif.id}}. {{muallif.ism}}</h1>
+    <a href="/muallif_edit/{{i.id}}"><button>Tahrirlash</button></a>
   {% endfor %}
+
+    <br>
+<form method="post">{% csrf_token %}
+<!--    <input type="text" placeholder="Ism yozing" name="ism">-->
+<!--    <input type="date" placeholder="Tug'ilgan sana" name="t_sana">-->
+<!--    <input type="number" placeholder="Kitoblar soni" name="k_soni">-->
+<!--    <label>Tirik-->
+<!--    <input type="checkbox"  name="tirik" >-->
+<!--    </label>-->
+    {{ forma.as_p }}
+    <button>Qo'shish</button>
+
+</form>
+<br>
 </body>
 </html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Records</title>
+</head>
+<body>
+<h1>Records</h1>
+  <br>
+  <hr>
+  {%for record in records %}
+  <br>
+  <h1>{{record.id}}. {{record.talaba}} </h1>
+  {% endfor %}
+
+<br>
+<br>
+<form method="post">{% csrf_token %}
+    <input type="text" placeholder="Talaba" name="talaba">
+    <input type="text" placeholder="Kitob" name="kitob">
+    <input type="text" placeholder="Kutubxonachi" name="kutubxonachi">
+    <input type="text" placeholder="Kutubxonachi" name="kutubxonachi">
+    <input type="text" placeholder="Kutubxonachi" name="kutubxonachi">
+    <button>Qo'shish</button>
+
+</form>
+<br>
+</body>
+</html>
